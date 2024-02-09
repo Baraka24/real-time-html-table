@@ -35,7 +35,7 @@
 	<h1>HTML TABLE/h1>
 	<h3>Perform a real-time search and filter on an HTML table</h3>
 	<b>Search the table for Course, Fees, or Type:
-		<input id="gfg" type="text" placeholder="Search here">
+		<input id="searchbar" type="text" placeholder="Search here">
 	</b>
 	<table>
 		<tr>
@@ -43,7 +43,7 @@
 			<th>Duration</th>
 			<th>Type</th>
 		</tr>
-		<tbody id="geeks">
+		<tbody id="tbodyid">
 			<tr>
 				<td>C++ STL</td>
 				<td>1499</td>
@@ -69,9 +69,9 @@
 
 	<script>
 		$(document).ready(function () {
-			$("#gfg").on("keyup", function () {
+			$("#searchbar").on("keyup", function () {
 				var value = $(this).val().toLowerCase();
-				$("#geeks tr").filter(function () {
+				$("#tbodyid tr").filter(function () {
 					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
 				});
 			});
